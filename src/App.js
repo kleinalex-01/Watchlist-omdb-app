@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import {react, useState} from 'react';
 import './App.css';
+import api_key from './api_key';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const baseURL = `http://www.omdbapi.com/?apikey=[${api_key}]&`
+    const posterURL = `http://img.omdbapi.com/?apikey=[${api_key}]&`
+    const [movies, setMovies] = useState([]);
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default App;
