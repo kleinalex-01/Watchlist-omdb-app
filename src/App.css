@@ -1,0 +1,22 @@
+* {
+    font-family: Inter;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ /* Header styling */
+.overlay {
+    position: absolute;
+    left: 0;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.header-container {
+    width: 100%;
+    background-image: url("../public/Images/bg.png");
+    background-position: 0 -14rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10rem;
+}
