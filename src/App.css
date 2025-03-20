@@ -20,3 +20,40 @@ a {
     background-repeat: no-repeat;
     height: 10rem;
 }
+/* Search bar */
+.search-container {
+    width: 75%;
+    margin: 0 auto;
+    position: absolute;
+    top: 27.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.search-container input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.search-container button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/* Search results */
+.searched-movies-container {
+    height: calc(100vh - 10rem);
+}
+/* Film icon */
+.icon-container {
+    opacity: 0.6;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.fa-film {
+    font-size: 8rem;
+}
+/* Movie Card Styling */
+.card {
+    width: 18rem;
+}
