@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
 
-export default function Main({ SearchResults, getInput, setSearchTerm }) {
+export default function Main({ SearchResults, getInput, setSearchTerm, setWatchlist }) {
+    const isEmptySearchResult = !Array.isArray(SearchResults) || SearchResults.length === 0;
     return (
         <>
         <div className="header-container container-fluid">
@@ -25,13 +26,16 @@ export default function Main({ SearchResults, getInput, setSearchTerm }) {
         </form>
 
         <div className="searched-movies-container container-fluid bg-light">
-            <MovieCard SearchResults={SearchResults}/>
+            <MovieCard SearchResults={SearchResults}
+                        setWatchlist={setWatchlist}/>
         </div>
 
-        {!SearchResults.length && <div className="icon-container">
-                            <i class="fa-solid fa-film" style={{color: "#97989b"}}></i>
-                            <p>Start exploring</p>
-                        </div>}
+        {isEmptySearchResult &&
+            <div className="icon-container">
+                <i className="fa-solid fa-film" style={{color: "#97989b"}}></i>
+                <p>Start exploring</p>
+            </div>
+        }
         </>
     )
 }
