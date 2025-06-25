@@ -10,9 +10,9 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path='watchlist' element={<Watchlist />} />
-          <Route path='*' element={<PageNotFound />} />
+            <Route index element={<Dashboard />} />
+            <Route path='watchlist' element={<Watchlist />} />
+            <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>
     </>

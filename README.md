@@ -10,3 +10,7 @@
 
   Created and worked on the Header component of the application. 
   Added a working light-dark mode properly with context. Also, saved it in localStorage for better practices. Next up is the UI.
+
+# Log 3 (2025.06.25.)
+
+  Added background image, fixed the UI and type safety issues with ThemeContext.
