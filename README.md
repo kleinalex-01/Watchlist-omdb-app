@@ -14,3 +14,7 @@
 # Log 3 (2025.06.25.)
 
   Added background image, fixed the UI and type safety issues with ThemeContext.
+
+# Log 4 (2025.06.26.)
+
+  Small UI work on the input field and messy fast fetch to test everything. Created context for shared state (watchlist).
