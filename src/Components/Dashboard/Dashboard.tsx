@@ -48,9 +48,7 @@ export const Dashboard: React.FC = () => {
             </div>
 
             <div className={styles.container}>
-                {searchResults.length !== 0 ?
                 <MovieCard movie={searchResults}/>
-                : <p>no movies yet</p>}
             </div>
         </>
     )

@@ -18,7 +18,13 @@ const WatchlistContext = createContext<WatchlistContextType | undefined>(undefin
 export const WatchlistProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [watchList, setWatchList] = useState<Movie[]>([]);
 
+    React.useEffect(() => {console.log(watchList)}, [watchList]);
+
     const addToWatchlist = (movie: Movie) => {
+        if (watchList.some((m) => m.Title === movie.Title)) {
+            alert(`${movie.Title} is already in the watchlist`);
+            return;
+        }
         setWatchList((prev) => [...prev, movie]);
     }
 

@@ -18,3 +18,7 @@
 # Log 4 (2025.06.26.)
 
   Small UI work on the input field and messy fast fetch to test everything. Created context for shared state (watchlist).
+
+# Log 5 (2025.06.27.)
+
+  Major work on the UI and functionality. Custom classnames aside bootstrap in order for the themes to work. Imported shared state from Context where needed, and hooked up the buttons with the neccessary functions.
