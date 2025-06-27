@@ -15,7 +15,7 @@ export const Dashboard: React.FC = () => {
         if (searchTerm.trim() === '') {
             return;
         }
-        axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
+        axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
             .then(res => {
                 console.log(res.data.Search);
                 if (res.data.Response === "True") {
