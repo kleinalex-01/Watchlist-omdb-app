@@ -10,7 +10,7 @@ export type Movie = {
 type WatchlistContextType = {
     watchlist: Movie[];
     addToWatchlist: (movie: Movie) => void;
-    removeFromWatchlist: (id: number) => void;
+    removeFromWatchlist: (imdbID: number) => void;
 }
 
 const WatchlistContext = createContext<WatchlistContextType | undefined>(undefined);
@@ -23,7 +23,7 @@ export const WatchlistProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     }
 
     const removeFromWatchlist = (id: number) => {
-        setWatchList((prev) => prev.filter(movie => movie.id !== id));
+        setWatchList((prev) => prev.filter(movie => movie.imdbID !== id));
     }
 
     return (
