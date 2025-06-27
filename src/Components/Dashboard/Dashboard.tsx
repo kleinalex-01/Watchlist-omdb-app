@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './Dashboard.module.css';
-import { useWatchlist } from '../../Context/WatchlistContext';
 import { MovieCard } from './MovieCard/MovieCard';
+import type { Movie } from '../../Context/WatchlistContext';
 
 export const Dashboard: React.FC = () => {
     const apiKey = import.meta.env.VITE_OMDB_API_KEY;
-    const { addToWatchlist } = useWatchlist();
 
     const [searchTerm, setSearchTerm] = useState<string>('');
-    const [searchResults, setSearchResults] = useState<any[]>([]);
+    const [searchResults, setSearchResults] = useState<Movie[]>([]);
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -18,6 +17,7 @@ export const Dashboard: React.FC = () => {
         }
         axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
             .then(res => {
+                console.log(res.data.Search);
                 if (res.data.Response === "True") {
                     setSearchResults(res.data.Search);
                 } else {
